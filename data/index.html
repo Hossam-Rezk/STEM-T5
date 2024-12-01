@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>Sensor Dashboard</h1>
+            <ul class="nav-links">
+                <li><a href="#temperature-card">Temperature</a></li>
+                <li><a href="#humidity-card">Humidity</a></li>
+                <li><a href="#tilt-card">Tilt</a></li>
+                <li><a href="#vibration-card">Vibration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card" id="temperature-card">
+            <h2>Temperature</h2>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="card" id="humidity-card">
+            <h2>Humidity</h2>
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="card" id="tilt-card">
+            <h2>Tilt (Pitch & Roll)</h2>
+            <canvas id="tiltChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Avg Temperature</h3>
+            <p id="avg-temp">-- °C</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-tint"></i>
+            <h3>Avg Humidity</h3>
+            <p id="avg-humidity">-- %</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-arrows-alt"></i>
+            <h3>Avg Tilt</h3>
+            <p id="avg-tilt">Pitch: --°, Roll: --°</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-wave-square"></i>
+            <h3>Vibration Status</h3>
+            <p id="avg-vibration">--</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Threshold Warning</h3>
+            <p id="warning" style="display: none; color: red; font-weight: bold;">--</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Sensor Dashboard | STEM [Branch]</p>
+        <p>Developed by: [Your Name]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
