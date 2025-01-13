@@ -20,8 +20,8 @@ Adafruit_MPU6050 mpu;
 #define BUZZER_PIN 15
 
 // Wi-Fi Credentials
-const char* ssid = "STEM19EE";
-const char* password = "1919016111@H";
+const char* ssid = "";
+const char* password = "";
 
 // Threshold Values
 float tempThreshold = 30.0;    // Temperature in °C
